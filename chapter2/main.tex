@@ -39,7 +39,7 @@
         Let $R^\prime = R \cup \{(s,s) \mid s \in S\}$ be \maru{1}.
         \begin{itemize}
             \item Proof of $R^{=} \subseteq R^\prime$ \\[2mm]
-            By \maru{1}, $R^\prime$ is reflexive since $(s,s) \in R^\prime$ for all $s \in S$. \\
+            By \maru{1}, since $(s,s) \in R^\prime$ for all $s \in S$, $R^\prime$ is reflexive. \\
             Moreover, $R^\prime$ contains $R$. Since $R^{=}$ is the minimal reflexive relation containing $R$, we have $R^{=} \subseteq R^\prime$.
             \item Proof of $R^\prime \subseteq R^{=}$ \\[2mm]
             Suppose $(s,t) \in R^\prime$. Then by \maru{1}, either $(s,t) \in R$ or $s=t \; (s \in S)$.
@@ -58,7 +58,7 @@
         \begin{itemize}
             \item $R^{T} \subseteq R^{+}$ \\[2mm]
             $(s,t),(t,u) \in R^{+}$ とすると，ある $i,j$ が存在して $(s,t) \in R_i$ かつ $(t,u) \in R_j$ である． \\
-            $R^{+}$ の定義より $(s,u) \in R_{\mathrm{max}(i,j)+1}$ であり，したがって，$(s,u) \in R^{+}$． \\
+            $R^{+}$ の定義より $(s,u) \in R_{\mathrm{max}(i,j)+1}$ であるから $(s,u) \in R^{+}$． \\
             よって，$R^{+}$ は推移的である． \\
             また，$R^{+}$ は $R$ を含む．$R^{T}$ は $R$ を含む最小の推移的関係であるため，$R^{T} \subseteq R^{+}$ である．
             \item $R^{+} \subseteq R^{T}$ \\[2mm]
@@ -80,7 +80,7 @@
         \begin{itemize}
             \item $R^{T} \subseteq R^{+}$ \\[2mm]
                 Suppose $(s,t), (t,u) \in R^{+}$. Then there exist some $i,j$ such that $(s,t) \in R_i$ and $(t,u) \in R_j$. \\
-                By the definition of $R^{+}$, we have $(s,u) \in R_{\mathrm{max}(i,j)+1}$, and therefore $(s,u) \in R^{+}$. \\
+                By the definition of $R^{+}$, since $(s,u) \in R_{\mathrm{max}(i,j)+1}$, we have $(s,u) \in R^{+}$. \\
                 Thus, $R^{+}$ is transitive. \\
                 Moreover, $R^{+}$ contains $R$. Since $R^{T}$ is the minimal transitive relation containing $R$, we have $R^{T} \subseteq R^{+}$.
             \item $R^{+} \subseteq R^{T}$ \\[2mm]
