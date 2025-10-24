@@ -65,9 +65,9 @@
             任意の $i$ について $R_i \subseteq R^{T}$ であることを数学的帰納法で示す．
             \begin{itemize}
                 \item $i=0$ のとき，$R_0 = R \subseteq R^{T}$．
-                \item $i=n$ のとき$R_i \subseteq R^{T}$ が成り立つと仮定して，$i=n+1$ のとき \\
-                $(s,u) \in R_{n+1}$ とすると，ある $t \in S$ が存在して $(s,t),(t,u) \in R_n$ である． \\
-                帰納法の仮定より $(s,t),(t,u) \in R^{T}$ であり，$R^{T}$ は推移的なので $(s,u) \in R^{T}$．
+                \item $i=n$ のとき $R_i \subseteq R^{T}$ が成り立つと仮定して，$i=n+1$ のとき \\
+                $(s,u) \in R_{n+1}$ とすると，$S$ の定義より，ある $t \in S$ が存在して $(s,t),(t,u) \in R_n$ である． \\
+                $R_n \subseteq R^{T}$（帰納法の仮定）より $(s,t),(t,u) \in R^{T}$ であり，$R^{T}$ が推移的であることから $(s,u) \in R^{T}$．
             \end{itemize}
             したがって，$R^{+} \subseteq R^{T}$ である．
         \end{itemize}
@@ -79,19 +79,19 @@
         Let $R^{T}$ be the transitive closure of $R$. We show that $R^{T} \subseteq R^{+}$ and $R^{+} \subseteq R^{T}$.
         \begin{itemize}
             \item $R^{T} \subseteq R^{+}$ \\[2mm]
-                Suppose $(s,t), (t,u) \in R^{+}$. Then there exist some $i,j$ such that $(s,t) \in R_i$ and $(t,u) \in R_j$. \\
-                By the definition of $R^{+}$, since $(s,u) \in R_{\mathrm{max}(i,j)+1}$, we have $(s,u) \in R^{+}$. \\
-                Thus, $R^{+}$ is transitive. \\
-                Moreover, $R^{+}$ contains $R$. Since $R^{T}$ is the minimal transitive relation containing $R$, we have $R^{T} \subseteq R^{+}$.
+            If $(s,t),(t,u) \in R^{+}$, then there exist some $i,j$ such that $(s,t) \in R_i$ and $(t,u) \in R_j$. \\
+            By definition of $R^{+}$, we have $(s,u) \in R_{\mathrm{max}(i,j)+1}$, thus $(s,u) \in R^{+}$. \\
+            Therefore, $R^{+}$ is transitive. \\
+            Moreover, $R^{+}$ contains $R$. Since $R^{T}$ is the minimal transitive relation containing $R$, we have $R^{T} \subseteq R^{+}$.
             \item $R^{+} \subseteq R^{T}$ \\[2mm]
-                We prove that $R_i \subseteq R^{T}$ for all $i$ by mathematical induction.
-                \begin{itemize}
-                    \item When $i=0$, $R_0 = R \subseteq R^{T}$.
-                    \item Assuming $R_i \subseteq R^{T}$ holds for $i=n$, let's prove for $i=n+1$. \\
-                        If $(s,u) \in R_{n+1}$, then there exists some $t \in S$ such that $(s,t),(t,u) \in R_n$. \\
-                        By the induction hypothesis, $(s,t),(t,u) \in R^{T}$, and since $R^{T}$ is transitive, $(s,u) \in R^{T}$.
-                \end{itemize}
-                Therefore, $R^{+} \subseteq R^{T}$.
+            We prove that $R_i \subseteq R^{T}$ holds for all $i$ by mathematical induction.
+            \begin{itemize}
+                \item When $i=0$, $R_0 = R \subseteq R^{T}$.
+                \item Assuming $R_i \subseteq R^{T}$ holds for $i=n$, we prove for $i=n+1$. \\
+                If $(s,u) \in R_{n+1}$, then by definition of $S$, there exists some $t \in S$ such that $(s,t),(t,u) \in R_n$. \\
+                By the induction hypothesis $R_n \subseteq R^{T}$, we have $(s,t),(t,u) \in R^{T}$, and since $R^{T}$ is transitive, $(s,u) \in R^{T}$.
+            \end{itemize}
+            Therefore, $R^{+} \subseteq R^{T}$.
         \end{itemize}
         Hence, $R^{+} = R^{T}$.\qed
 
